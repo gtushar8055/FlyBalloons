@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background: url('https://img.freepik.com/premium-photo/panoramic-splendor-clouds-bright-blue-sky-background_957479-31255.jpg');
+    overflow: hidden;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    -webkit-text-stroke: 1px , white;
+}
+span{
+    background: url('bal-removebg-preview.png');
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left:50%;
+    top:50%;
+    transform: translate(-50% ,-50%);
+    animation: animate 6s ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
